@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prince Ignite Your English</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="logo"><span>P</span> Prince Ignite Your English</div>
+  <div class="nav">
+    <a class="active" onclick="show('home')">Home</a>
+    <a onclick="show('courses')">Courses</a>
+    <a onclick="show('practice')">Practice</a>
+    <a onclick="show('about')">About</a>
+  </div>
+</header>
+
+<main>
+<div id="home" class="view">
+  <div class="hero">
+    <h1>Ignite Your English, <span>Unlock The World</span></h1>
+    <p>Learn English from Zero to Advanced with Prince. Simple grammar, real conversations, daily practice.</p>
+    <button class="btn" onclick="show('courses')">Start Learning Free</button>
+    <button class="btn btn-white" onclick="show('practice')">Practice Speaking</button>
+  </div>
+
+  <div class="grid">
+    <div class="card-white course" onclick="show('courses')">
+      <div class="icon">📚</div>
+      <h3>Grammar Made Easy</h3>
+      <p>Learn tenses, articles, prepositions with simple examples.</p>
+    </div>
+    <div class="card-white course" onclick="show('courses')">
+      <div class="icon">🗣️</div>
+      <h3>Speaking & Listening</h3>
+      <p>Daily conversation, pronunciation, and fluency practice.</p>
+    </div>
+    <div class="card-white course" onclick="show('practice')">
+      <div class="icon">✍️</div>
+      <h3>Vocabulary Builder</h3>
+      <p>5000+ useful words, idioms, phrasal verbs with examples.</p>
+    </div>
+  </div>
+
+  <div class="card-white">
+    <h3>🔥 Word of the Day</h3>
+    <div class="quote">
+      <b>Ignite</b> /ig·nait/ - verb<br>
+      To start burning or to cause strong feelings.<br><br>
+      Example: "Prince wants to <b>ignite</b> your passion for English."
+    </div>
+    <button class="btn" onclick="speakWord('Ignite')">🔊 Hear Pronunciation</button>
+  </div>
+</div>
+
+<div id="courses" class="view hidden">
+  <div class="card-white">
+    <h2>📘 English Courses</h2>
+    <div class="lesson-list" style="margin-top:16px">
+      <div class="lesson" onclick="openLesson('Beginner - Alphabet & Sounds')"><div><b>Level 1: Beginner</b><br><small>Alphabet, Sounds, Greetings</small></div><span class="tag">FREE</span></div>
+      <div class="lesson" onclick="openLesson('Tenses - Present, Past, Future')"><div><b>Level 2: Tenses</b><br><small>12 Tenses in 30 minutes</small></div><span class="tag">FREE</span></div>
+      <div class="lesson" onclick="openLesson('Daily Conversations')"><div><b>Level 3: Daily Conversation</b><br><small>Market, School, Travel</small></div><span class="tag">POPULAR</span></div>
+      <div class="lesson" onclick="openLesson('Business English')"><div><b>Level 4: Business English</b><br><small>Email, Interview, Meeting</small></div><span class="tag">NEW</span></div>
+      <div class="lesson" onclick="openLesson('IELTS & Exams')"><div><b>Level 5: IELTS Preparation</b><br><small>Band 7+ Strategy</small></div><span class="tag">ADVANCED</span></div>
+    </div>
+  </div>
+  <div id="lessonBox" class="card-white hidden"></div>
+</div>
+
+<div id="practice" class="view hidden">
+  <div class="card-white">
+    <h2>🗣️ Practice Zone</h2>
+    <div class="grid" style="margin-top:14px">
+      <div class="card-white" style="background:#f0fdf4">
+        <h4>Translate This</h4>
+        <p style="margin:10px 0;font-weight:600">How are you today?</p>
+        <input id="transInput" placeholder="Type your answer...">
+        <button class="btn" style="width:100%" onclick="checkTrans()">Check</button>
+      </div>
+      <div class="card-white" style="background:#fff7ed">
+        <h4>Vocabulary Quiz</h4>
+        <p style="margin:10px 0;font-weight:600">Opposite of "Happy"?</p>
+        <button class="btn" style="width:100%;background:white;color:#333;border:1px solid #ddd" onclick="toast('Correct! Sad 😊')">A) Sad</button>
+        <button class="btn" style="width:100%;background:white;color:#333;border:1px solid #ddd" onclick="toast('Try again!')">B) Big</button>
+      </div>
+      <div class="card-white" style="background:#eff6ff">
+        <h4>Speak Now</h4>
+        <button class="btn" style="width:100%;margin-top:10px" onclick="speakWord('My name is Prince and I love English')">🎤 Practice Sentence</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="about" class="view hidden">
+  <div class="card-white" style="text-align:center;padding:40px 20px">
+    <div style="width:80px;height:80px;background:#ff6b00;color:white;border-radius:50%;display:grid;place-items:center;font-size:36px;margin:0 auto;font-weight:800">P</div>
+    <h2 style="margin-top:12px">Prince Ignite Your English</h2>
+    <p style="color:#666;margin:12px 0;line-height:1.6">We make English simple, fun, and practical. No big grammar. Just speak, learn, grow.</p>
+    <button class="btn" onclick="show('home')">Start Learning</button>
+  </div>
+</div>
+</main>
+
+<footer>
+  © 2025 <b>Prince Nickel</b> - Prince Ignite Your English<br>
+  <div class="small">All Rights Reserved • Designed with ❤️ for English Learners</div>
+</footer>
+
+<div id="toast" class="toast hidden"></div>
+<script src="script.js"></script>
+</body>
+</html>

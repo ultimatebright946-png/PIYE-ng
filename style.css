@@ -1,0 +1,34 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{background:#f8fafc;color:#1a1a1a;display:flex;flex-direction:column;min-height:100vh}
+.hidden{display:none!important}
+header{background: white;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 15px rgba(0,0,0,.06);position:sticky;top:0;z-index:20}
+.logo{font-weight:800;font-size:20px;color:#0a3d2e;display:flex;gap:8px;align-items:center}
+.logo span{background:#ff6b00;color:purple;width:32px;height:32px;display:grid;place-items:center;border-radius:8px}
+.nav{display:flex;gap:20px;font-size:14px;font-weight:600}
+.nav a{cursor:pointer;color:#444;text-decoration:none}
+.nav a.active{color:#ff6b00}
+.view{max-width:1100px;margin:0 auto;padding:20px;width:100%}
+main{flex:1}
+.hero{background:linear-gradient(135deg,#0a3d2e 0%,#0f9d58 100%);color:white;padding:50px 24px;border-radius:24px;text-align:center;margin:10px 0}
+.hero h1{font-size:38px;line-height:1.1;max-width:600px;margin:0 auto}
+.hero h1 span{color:#ffcc33}
+.hero p{opacity:.9;margin:14px auto;max-width:500px;line-height:1.6}
+.btn{background:#ff6b00;color:white;border:none;padding:14px 28px;border-radius:30px;font-weight:700;cursor:pointer;margin:8px 4px}
+.btn-white{background:white;color:#0a3d2e}
+.card-white{background:white;padding:20px;border-radius:18px;box-shadow:0 6px 25px rgba(0,0,0,.06);margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.course{cursor:pointer;transition:.2s}.course:hover{transform:translateY(-4px)}
+.course .icon{width:50px;height:50px;background:#fff3e6;border-radius:12px;display:grid;place-items:center;font-size:24px;margin-bottom:10px}
+.course h3{font-size:16px;margin-bottom:6px}
+.course p{font-size:13px;color:#666;line-height:1.4}
+.lesson-list{display:flex;flex-direction:column;gap:10px}
+.lesson{display:flex;justify-content:space-between;align-items:center;padding:14px;background:#f8fafc;border-radius:12px;cursor:pointer}
+.lesson:hover{background:#fff3e6}
+.tag{font-size:10px;background:#0a3d2e;color:white;padding:4px 8px;border-radius:20px}
+input{width:100%;padding:14px;border:1.5px solid #e5e7eb;border-radius:12px;margin:8px 0}
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#0a3d2e;color:white;padding:12px 20px;border-radius:10px;z-index:99}
+.quote{background:#fff8e6;border-left:4px solid #ff6b00;padding:14px;border-radius:10px;margin:12px 0;font-style:italic}
+footer{background:#0a3d2e;color:white;text-align:center;padding:18px 20px;margin-top:40px;font-size:13px;letter-spacing:.3px}
+footer b{color:#ffcc33}
+footer .small{opacity:.7;font-size:11px;margin-top:4px}
+@media(max-width:768px){.grid{grid-template-columns:1fr}.hero h1{font-size:28px}.nav{display:none}}
